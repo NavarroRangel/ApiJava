@@ -1,6 +1,9 @@
-package java10x.dev.CadastroDeNinjas;
+package java10x.dev.CadastroDeNinjas.Ninjas.Model;
 
 import jakarta.persistence.*;
+import java10x.dev.CadastroDeNinjas.Missoes.Model.MissoesModel;
+
+import java.util.List;
 
 
 // Entity transforma uma classe em uma entidade do DB
@@ -15,6 +18,7 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModel> missoes;
 
     //Teste commit ammend
 
