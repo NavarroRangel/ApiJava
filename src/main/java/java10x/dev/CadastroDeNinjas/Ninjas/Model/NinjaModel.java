@@ -20,7 +20,9 @@ public class NinjaModel {
     private int idade;
 
     // @ManyToOne um ninja tem uma única missão muitos ninjas pra uma missao
+
     @ManyToOne
+    @JoinColumn(name = "missoes_id") // Foreing key ou chave estrangeira
     private MissoesModel missoes;
 
     //Teste commit ammend

@@ -19,7 +19,8 @@ public class MissoesModel {
     private String dificuldade;
 
     //Uma missao para muitos ninjasq
-    @OneToMany
+    // Chave estrangeira mapeia
+    @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninjas;
 
     public MissoesModel() {
