@@ -18,7 +18,10 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
-    private List<MissoesModel> missoes;
+
+    // @ManyToOne um ninja tem uma única missão muitos ninjas pra uma missao
+    @ManyToOne
+    private MissoesModel missoes;
 
     //Teste commit ammend
 

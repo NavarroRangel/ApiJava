@@ -3,6 +3,8 @@ package java10x.dev.CadastroDeNinjas.Missoes.Model;
 import jakarta.persistence.*;
 import java10x.dev.CadastroDeNinjas.Ninjas.Model.NinjaModel;
 
+import java.util.List;
+
 @Entity
 @Table (name = "tb_missoes")
 public class MissoesModel {
@@ -10,22 +12,23 @@ public class MissoesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id ;
+    private Long id;
 
     private String nome;
 
     private String dificuldade;
 
-    private NinjaModel ninja;
+    //Uma missao para muitos ninjasq
+    @OneToMany
+    private List<NinjaModel> ninjas;
 
     public MissoesModel() {
     }
 
-    public MissoesModel(Long id, String nome, String dificuldade, NinjaModel ninja) {
+    public MissoesModel(Long id, String nome, String dificuldade) {
         this.id = id;
         this.nome = nome;
         this.dificuldade = dificuldade;
-        this.ninja = ninja;
     }
 
     public Long getId() {
@@ -52,11 +55,5 @@ public class MissoesModel {
         this.dificuldade = dificuldade;
     }
 
-    public NinjaModel getNinja() {
-        return ninja;
-    }
 
-    public void setNinja(NinjaModel ninja) {
-        this.ninja = ninja;
-    }
 }
