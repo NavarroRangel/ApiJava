@@ -1,12 +1,10 @@
-package java10x.dev.CadastroDeNinjas.Ninjas.Model;
+package java10x.dev.CadastroDeNinjas.Ninjas;
 
 import jakarta.persistence.*;
-import java10x.dev.CadastroDeNinjas.Missoes.Model.MissoesModel;
+import java10x.dev.CadastroDeNinjas.Missoes.MissoesModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 
 // Entity transforma uma classe em uma entidade do DB
