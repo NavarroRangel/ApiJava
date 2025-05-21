@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class NinjaModel {
 
+    //NAO MEXER
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

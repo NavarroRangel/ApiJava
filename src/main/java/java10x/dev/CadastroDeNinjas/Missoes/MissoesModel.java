@@ -20,7 +20,8 @@ import java.util.List;
 @AllArgsConstructor
 @Data
 public class MissoesModel {
-    //TODO missão = id, String Nome, Enum Dificuldade
+
+    //NAO MEXER
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
