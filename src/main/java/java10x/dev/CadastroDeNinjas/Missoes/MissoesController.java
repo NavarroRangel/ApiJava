@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 // LOCALHOST:8080/...
 
 @RestController
-@RequestMapping("missoes")
+@RequestMapping("/missoes")
 
 public class MissoesController {
 
