@@ -1,5 +1,6 @@
 package java10x.dev.CadastroDeNinjas.Missoes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java10x.dev.CadastroDeNinjas.Ninjas.NinjaModel;
 import lombok.AllArgsConstructor;
@@ -34,7 +35,7 @@ public class MissoesModel {
     //Uma missao para muitos ninjasq
     // Chave estrangeira mapeia
     @OneToMany(mappedBy = "missoes")
-
+    @JsonIgnore
     private List<NinjaModel> ninjas;
 
 

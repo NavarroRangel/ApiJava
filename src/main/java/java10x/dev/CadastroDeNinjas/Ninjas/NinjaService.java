@@ -1,4 +1,23 @@
 package java10x.dev.CadastroDeNinjas.Ninjas;
 
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
 public class NinjaService {
+
+
+    private NinjaRepository ninjaRepository;
+    //TODA VEZ QUE INJETA UMA DEPENDENCIA INICIA CONSTRUTOR
+
+    public NinjaService(NinjaRepository ninjaRepository) {
+        this.ninjaRepository = ninjaRepository;
+    }
+    //LIstar todos os ninjas
+    public List<NinjaModel> listarNinjas(){
+        return ninjaRepository.findAll();
+    }
+
+
 }
