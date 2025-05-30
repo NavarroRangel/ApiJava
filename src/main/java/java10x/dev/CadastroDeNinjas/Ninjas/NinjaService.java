@@ -9,12 +9,16 @@ import java.util.Optional;
 public class NinjaService {
 
 
-    private NinjaRepository ninjaRepository;
+    private  NinjaRepository ninjaRepository;
+    private  NinjaMapper ninjaMapper;
+
+    public NinjaService(NinjaRepository ninjaRepository, NinjaMapper ninjaMapper) {
+        this.ninjaRepository = ninjaRepository;
+        this.ninjaMapper = ninjaMapper;
+    }
+
     //TODA VEZ QUE INJETA UMA DEPENDENCIA INICIA CONSTRUTOR
 
-    public NinjaService(NinjaRepository ninjaRepository) {
-        this.ninjaRepository = ninjaRepository;
-    }
     //LIstar todos os ninjas
     public List<NinjaModel> listarNinjas(){
         return ninjaRepository.findAll();
@@ -28,8 +32,10 @@ public class NinjaService {
     }
 
     // Criar um novo Ninja
-    public NinjaModel criarNinja(NinjaModel ninja){
-        return ninjaRepository.save(ninja);
+    public NinjaDTO criarNinja(NinjaDTO ninjaDTO){
+        NinjaModel ninja = ninjaMapper.map(ninjaDTO);
+        ninja = ninjaRepository.save(ninja);
+        return ninjaMapper.map(ninja);
     }
 
     // Deletar um Ninja - Tem que ser um método void
