@@ -2,11 +2,13 @@ package java10x.dev.CadastroDeNinjas.Missoes;
 
 import java10x.dev.CadastroDeNinjas.Ninjas.NinjaDTO;
 import java10x.dev.CadastroDeNinjas.Ninjas.NinjaMapper;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public class MissoesService {
 
     private MissoesRepository missoesRepository;
