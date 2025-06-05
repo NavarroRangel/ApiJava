@@ -6,6 +6,7 @@ import java10x.dev.CadastroDeNinjas.Ninjas.NinjaModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 //Layered arch = arquitetura por camadas
@@ -20,6 +21,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ToString
+
 public class MissoesModel {
 
     //NAO MEXER

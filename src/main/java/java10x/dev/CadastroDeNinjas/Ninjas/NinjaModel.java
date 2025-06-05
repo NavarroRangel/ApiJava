@@ -5,6 +5,7 @@ import java10x.dev.CadastroDeNinjas.Missoes.MissoesModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 
 // Entity transforma uma classe em uma entidade do DB
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ToString(exclude = "missoes")
 public class NinjaModel {
 
     //NAO MEXER
